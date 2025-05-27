@@ -12,7 +12,7 @@ const client = new Client({
     }
 });
 
-let currentModel = 'llama3-8b-8192'; // Default Groq model
+let currentModel = 'model id'; 
 
 client.on('qr', (qr) => {
     console.log("📲 Scan this QR code to connect:");
@@ -34,7 +34,7 @@ client.on('message', async (message) => {
         if (body.startsWith('!model')) {
             const parts = body.split(' ');
             if (parts.length < 2) {
-                message.reply("⚠️ Usage: !model <model-id>\nExample: !model llama3-8b-8192");
+                message.reply("⚠️ Usage: !model <model-id>\nExample: model id");
                 return;
             }
             currentModel = parts[1];
@@ -42,7 +42,7 @@ client.on('message', async (message) => {
             return;
         }
 
-        // Handle question asking
+       
         if (body.startsWith('!ask')) {
             const prompt = body.slice(4).trim();
             if (!prompt) {
@@ -53,14 +53,14 @@ client.on('message', async (message) => {
             message.reply("⏳ Thinking...");
 
             try {
-                const response = await axios.post("https://api.groq.com/openai/v1/chat/completions", {
+                const response = await axios.post("api endpoint", {
                     model: currentModel,
                     messages: [
                         { role: "user", content: prompt }
                     ]
                 }, {
                     headers: {
-                        "Authorization": "Bearer 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",
+                        "Authorization": "Bearer open_api_key_here",
                         "Content-Type": "application/json"
                     }
                 });
@@ -69,7 +69,7 @@ client.on('message', async (message) => {
                 message.reply(reply);
             } catch (error) {
                 console.error("❌ API error:", error.response?.data || error.message);
-                message.reply("❌ Error: Could not get a response from Groq API.");
+                message.reply("❌ Error: Could not get a response .");
             }
         }
     }
