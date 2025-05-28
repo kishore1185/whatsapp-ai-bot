@@ -29,6 +29,6 @@ This bot is a template. Add your custom AI APIs, commands, and handlers easily!
 Fork, star ⭐, and send a pull request!
 
 ## 🔗 Links
-- [Follow me on GitHub](https://github.com/YOUR_USERNAME)
+- [Follow me on GitHub](https://github.com/kishore1185)
 - [Check demo video](#)
 
