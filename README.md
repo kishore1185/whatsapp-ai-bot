@@ -30,5 +30,6 @@ Fork, star ⭐, and send a pull request!
 
 ## 🔗 Links
 - [Follow me on GitHub](https://github.com/kishore1185)
-- [Check demo video](#)
+- [Follow me on social media]
+- (https://www.instagram.com/kishore_8532official?igsh=emxsNDg4bzA4a2N6&utm_source=qr)
 
